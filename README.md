@@ -1,10 +1,11 @@
 # Supported tags and respective `Dockerfile` links
 
-* [`2.78c`, `latest` (*2.78c/Dockerfile*)](https://github.com/ikester/blender-docker/blob/2.78c/Dockerfile)
-* [`2.77a` (*2.77a/Dockerfile*)](https://github.com/ikester/blender-docker/blob/2.77a/Dockerfile)
-* [`2.76b` (*2.76b/Dockerfile*)](https://github.com/ikester/blender-docker/blob/2.76b/Dockerfile)
-* [`2.75a` (*2.75a/Dockerfile*)](https://github.com/ikester/blender-docker/blob/2.75a/Dockerfile)
-* [`2.73a` (*2.73a/Dockerfile*)](https://github.com/ikester/blender-docker/blob/2.73a/Dockerfile)
+* [`2.78c`, `latest` (*2.78c/Dockerfile*)](https://github.com/ikester/blender-docker/blob/master/2.78c/Dockerfile)
+* [`2.78c-noentrypoint` (*2.78c-noentrypoint/Dockerfile*)](https://github.com/ikester/blender-docker/blob/master/2.78c/noentrypoint/Dockerfile)
+* [`2.77a` (*2.77a/Dockerfile*)](https://github.com/ikester/blender-docker/blob/master/2.77a/Dockerfile)
+* [`2.76b` (*2.76b/Dockerfile*)](https://github.com/ikester/blender-docker/blob/master/2.76b/Dockerfile)
+* [`2.75a` (*2.75a/Dockerfile*)](https://github.com/ikester/blender-docker/blob/master/2.75a/Dockerfile)
+* [`2.73a` (*2.73a/Dockerfile*)](https://github.com/ikester/blender-docker/blob/master/2.73a/Dockerfile)
 
 These are the Docker Hub Blender autobuild images located [here](https://hub.docker.com/r/ikester/blender-autobuild/). For manual builds [look here](https://hub.docker.com/r/ikester/blender/) instead.
 
@@ -18,7 +19,7 @@ These are the Docker Hub Blender autobuild images located [here](https://hub.doc
 
 This image is intended to be used as a command line, render-only node for `.blend` files. You will need to create the 3D files beforehand using Blender's full GUI or download one from the many Blender file sharing sites like [Blend Swap](http://www.blendswap.com).
 
-The entry point for this image is the blender non-gui command line `blender -b`. You can use the `/media/` directory to mount a volume with source files.
+The entry point for this image is the blender non-gui command line `blender -b`. You can use the `/media/` directory to mount a volume with source files. The `-noentrypoint` image is provided for use cases such as cloud deployments where having an entrypoint is not desirable.
 
 # Rendering a single frame
 
